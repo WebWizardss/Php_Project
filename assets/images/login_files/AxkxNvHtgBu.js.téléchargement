@@ -1,0 +1,10 @@
+;/*FB_PKG_DELIM*/
+
+__d("createCometComposerAgnosticEditorStateFromText",["cr:7257","cr:8221"],(function(a,b,c,d,e,f,g){"use strict";function a(a,c){return b("cr:7257")!=null?{editorState:b("cr:7257")(a,c)}:{initialRawContentState:b("cr:8221")==null?void 0:b("cr:8221")({ranges:[],text:a})}}g["default"]=a}),98);
+__d("createCometComposerEditorStateFromText",[],(function(a,b,c,d,e,f){"use strict";function a(a,b){return babelHelpers["extends"]({__type:"plain-text",hasFocus:!1,isComposing:!1,isPendingSelection:!1,selectionOffsets:null,text:a},b)}f["default"]=a}),66);
+__d("ProfileCometFeaturedPinLimitText",["fbt"],(function(a,b,c,d,e,f,g,h){"use strict";a=h._("__JHASH__-FPLmQkwrZY__JHASH__");g.pinLimitErrorText=a}),98);
+__d("CometSaveLoggingContext",["react"],(function(a,b,c,d,e,f,g){"use strict";var h;a=h||d("react");b=a.createContext({collectionID:null,referrer:null,surface:"dashboard",surfaceGraphQL:"DASHBOARD",surfaceGraphQL_legacy:"dashboard"});g["default"]=b}),98);
+__d("useCometSaveLoggingContext",["CometSaveLoggingContext","react"],(function(a,b,c,d,e,f,g){"use strict";var h,i=(h||d("react")).useContext;function a(){return i(c("CometSaveLoggingContext"))}g["default"]=a}),98);
+__d("useSearchCometResultsSearchTypeFromURL",["CometRouteParams"],(function(a,b,c,d,e,f,g){"use strict";function a(){var a=d("CometRouteParams").useRouteParams();a=a.searchtype;a=a!=null?a:null;return a}g["default"]=a}),98);
+__d("CometEditFeedComposerDialogQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="6623269644467682"}),null);
+__d("XCometSaveDashboardControllerRouteBuilder",["jsRouteBuilder"],(function(a,b,c,d,e,f,g){a=c("jsRouteBuilder")("/saved/",Object.freeze({unlisted_only:!1}),void 0);b=a;g["default"]=b}),98);

@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("LSClearCMSearchNullstateMetadata",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(a){return b.fe(b.db.table(289).fetch(),function(a){return a["delete"]()})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
+__d("LSInsertCmSearchNullstateMetadata",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(c){return b.db.table(289).add({threadKey:a[0],scoreType:a[1],threadName:a[2],threadType:a[9],threadPictureUrl:a[3],threadPictureUrlFallback:a[4],secondaryThreadPictureUrl:a[5],secondaryThreadPictureUrlFallback:a[6],contextLine:a[7],score:a[8],rankScoreRequestId:a[10],communityId:a[11],rowType:a[12],fbGroupId:a[13]})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
