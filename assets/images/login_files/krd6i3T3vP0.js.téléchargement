@@ -1,0 +1,6 @@
+;/*FB_PKG_DELIM*/
+
+__d("TopOfFeedTrayAdditionalProfileRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="6794988490578196"}),null);
+__d("TopOfFeedTrayAdditionalProfileRootQuery$Parameters",["TopOfFeedTrayAdditionalProfileRootQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("TopOfFeedTrayAdditionalProfileRootQuery_facebookRelayOperation"),metadata:{},name:"TopOfFeedTrayAdditionalProfileRootQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("TopOfFeedAdditionalProfileDeferred.react",["deferredLoadComponent","react","requireDeferredForDisplay"],(function(a,b,c,d,e,f,g){"use strict";var h;h||d("react");a=c("deferredLoadComponent")(c("requireDeferredForDisplay")("TopOfFeedTrayAdditionalProfileRoot.react").__setRef("TopOfFeedAdditionalProfileDeferred.react"));b=a;g["default"]=b}),98);
+__d("useSessionStorage",["WebStorage","useBrowserStorage"],(function(a,b,c,d,e,f,g){"use strict";var h,i=(h||c("WebStorage")).getSessionStorage();function a(a,b){return c("useBrowserStorage")(i,a,b)}g["default"]=a}),98);

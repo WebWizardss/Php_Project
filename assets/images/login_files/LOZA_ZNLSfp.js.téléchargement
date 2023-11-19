@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("LSReplaceOptimisticReaction",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(c){return b.fe(b.ftr(b.db.table(8).fetch([[[a[0],a[2],a[1]]]]),function(c){return b.i64.eq(c.threadKey,a[0])&&c.messageId===a[2]&&b.i64.eq(c.actorId,a[1])&&b.i64.eq(b.i64.cast([0,0]),b.i64.cast([0,0]))&&b.i64.le(c.authorityLevel,b.i64.cast([0,20]))}),function(a){var c=a.update;a.item;return c({authorityLevel:b.i64.cast([0,60])})})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
