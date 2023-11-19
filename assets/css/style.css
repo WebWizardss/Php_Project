@@ -1,0 +1,200 @@
+/*========== navbar ==========*/
+.nav {
+
+    padding: 15px;
+    width: 100%;
+}
+
+nav {
+    margin-top: -100px;
+    display: flex;
+    padding: 20px;
+
+}
+
+nav a {
+    padding: 20px;
+    position: relative;
+    list-style-type: none;
+    margin: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav a::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    padding-top: -22px;
+    background-color: brown;
+    left: 0;
+    bottom: 0;
+    transform: scale(0.1);
+    transition: .4s;
+}
+
+nav a:hover::before {
+    transform: scale(1.1);
+}
+.sine_up{
+    text-align: right;
+    color: red;
+}
+
+.logo {
+    margin-top: 200px;
+    margin-bottom: -200px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+}
+
+/*========== Acceuil ==========*/
+.home {
+    display: flex;
+    background: url("../photo/first_bg.jpg");
+    height: 100%;
+    color: rgb(10, 10, 10);
+    min-height: 950px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: -140px;
+}
+
+
+
+
+.max-width {
+    max-width: 1300px;
+    padding: 0% 10%;
+    margin: auto;
+
+}
+
+.home .home-content .text1 {
+
+    font-size: 6vw;
+    font-weight: 400;
+    margin-left: -3px;
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+/*========== menu ==========*/
+
+.p_120 {
+    padding: 5%;
+    margin: 80px;
+    padding-top: 20px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.service_item {
+    text-align: center;
+    padding: 2px;
+    /* background-color: #008080; */
+    font-family: "Times New Roman", Times, serif;
+}
+
+.service_item1 {
+    margin-bottom: -50px;
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+    padding: 2px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.photo_menu1 {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.separation a :hover {
+    transition: .4s;
+    width: 102%;
+    height: 100%;
+    box-shadow: 16px 10px 20px 0px rgba(0, 0, 0, 0.27);
+}
+
+.separation {
+    padding: 20px;
+}
+
+/*========== SERVICES ==========*/
+.services__container {
+    row-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.services__content {
+    text-align: center;
+}
+
+.services__img {
+    width: 64px;
+    height: 64px;
+    fill: var(--first-color);
+    margin-bottom: var(--mb-2);
+}
+
+.services__title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-1);
+    padding: 10px;
+    font-size: 30px;
+    font-family: bold;
+}
+
+.services__description {
+    padding: 0 1.5rem;
+}
+
+.section-title,
+.section-subtitle {
+    text-align: center;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--mb-3);
+    font-size: 60px;
+    font-family: bold;
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+    
+}
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+  }

@@ -1,0 +1,128 @@
+/*========== navbar ==========*/
+.nav {
+
+    padding: 15px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+
+}
+
+nav a {
+    padding: 20px;
+    position: relative;
+    list-style-type: none;
+    margin: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav a::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    padding-top: -22px;
+    background-color: brown;
+    left: 0;
+    bottom: 0;
+    transform: scale(0.1);
+    transition: .4s;
+}
+
+nav a:hover::before {
+    transform: scale(1.1);
+}
+/* CSS for All */
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+.text-center{
+    margin-bottom: 100px ;
+    text-align: center;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+
+/* CSS for Food Menu */
+.food-menu{
+    
+    margin-top: -120px;
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
