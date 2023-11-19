@@ -44,7 +44,7 @@ nav a::before {
 nav a:hover::before {
     transform: scale(1.1);
 }
-.sine_up{
+.sign_up{
     text-align: right;
     color: red;
 }
