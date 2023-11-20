@@ -1,3 +1,7 @@
+
 <?php 
-include "./login.phtml";
+require "../DbConnect/index.php";
+$page_titel = "page login";
+$template = "login";
+include "../layout.phtml";
 ?>
