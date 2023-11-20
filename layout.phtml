@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhpProject</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    <?= $page_titel ?>
+</title>
+</head>
+
 <body>
-    
+    <!-- <img src="./assets/photo/logo.png" alt="" class="logo sticky-top"> -->
+    <?php if ($template == "index") { ?>
+        <nav class=" d-inline-block text-center shadow-lg mb-5 nav sticky-top">
+
+            <a href="#acceuil" class="text-decoration-none  btn-light col">Acceuil</a>
+            <a href="#no_menu" class="text-decoration-none  btn-light col">menu</a>
+            <a href="#obout_us" class="text-decoration-none  btn-light col">about us</a>
+            <a href="" class="text-decoration-none  btn-light col">contact</a>
+            <a href="./signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
+        </nav>
+    <?php } else { ?>
+        <nav class=" d-inline-block text-center shadow-lg mb-5 nav sticky-top">
+            <a href="../index.php" class="text-decoration-none  btn-light col">Acceuil</a>
+            <a href="../index.php" class="text-decoration-none  btn-light col">menu</a>
+            <a href="../index.php" class="text-decoration-none  btn-light col">about us</a>
+            <a href="../index.php" class="text-decoration-none  btn-light col">contact</a>
+            <a href="../signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
+        </nav>
+    <?php } ?>
+    <?php include $template . ".phtml"; ?><!--Dynamique-->
+
 </body>
+
 </html>

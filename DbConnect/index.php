@@ -1,5 +1,5 @@
 <?php
-// define('cont','valeur')
+
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_Pass','');
@@ -9,9 +9,5 @@ try {
 } catch (Exception $error) {//e de type  exception w exeception heya akber wahda tlmhom kol mta les
     echo $error->getMessage();
 }
-
-
-
-
 
 ?>

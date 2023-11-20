@@ -1,3 +1,7 @@
+
 <?php 
-include "./modifier.phtml";
+require "../DbConnect/index.php";
+$page_titel = "page forget password";
+$template = "modifier";
+include "../layout.phtml";
 ?>

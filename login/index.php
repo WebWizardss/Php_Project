@@ -1,4 +1,6 @@
+
 <?php 
+
 require_once "../Dbconnect/index.php";
  
     $errors=[];
@@ -23,9 +25,9 @@ require_once "../Dbconnect/index.php";
                     "email"=>$Email,
                ]);
 
-               $user=$res->fetch(PDO::FETCH_ASSOC); // bch nafichi 
+               $user=$res->fetch(PDO::FETCH_ASSOC); //  
                if($user){
-                if(!password_verify($password,$user['password'])){ //bch ntasti l mdp li dakhlto w l mghoti 
+                if(!password_verify($Password,$user['password'])){  
                   header("location:index.php?message=password or email is incorrect&type=danger");
                 }
                 else{
@@ -47,5 +49,7 @@ require_once "../Dbconnect/index.php";
 
 
 
-include "./login.phtml";
+$page_titel = "page login";
+$template = "login";
+include "../layout.phtml";
 ?>
