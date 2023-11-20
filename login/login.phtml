@@ -16,12 +16,23 @@
                       <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-5">Welcome Back !</h1>
                       </div>
-                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                    <form action="./" method="POST">
+
+
+                    <?php if(array_key_exists("message",$_GET)): ?>  <!--  tasti fama key esmo message wela le  -->
+                     <div class="alert alert-<?=$_GET['type']?>">
+                      <?php echo $_GET['message'] ?>    <!-- tafichi l vvaleur ta l key esmo message   -->
+                        </div>
+                          <?php endif; ?> 
+
+
                       <div class="mb-4">
-                          <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4" id="exampleInputEmail1">
+                          <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4  <?= array_key_exists('Email',$errors) ? 'is-invalid' :''?> "  value="<?= $Email ?>" id="exampleInputEmail1">
+                          <small class="text-danger"><?php echo array_key_exists("Email",$errors) ?   $errors['Email'] : '' ?></small>
                       </div>
                       <div class="mb-5">
-                         <input type="password" placeholder="Password" name="password" class="form-control rounded-pill p-4" id="exampleInputPassword1">
+                         <input type="password" placeholder="Password" name="password"  class="form-control rounded-pill p-4 <?= array_key_exists('Password',$errors) ? 'is-invalid' :''?> " value="<?= $Password ?>" id="exampleInputPassword1">
+                         <small class="text-danger"><?php echo array_key_exists("Password",$errors) ?   $errors['Password'] : '' ?></small>
                       </div>
                           <button style="font-size:19px" type="submit" name="submit" class="btn btn-primary btn-block w-100 rounded-pill">Login</button>
                       </form>
