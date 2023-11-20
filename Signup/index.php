@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
              "nom"=>$nom,
              "prenom"=>$prenom,
              "email"=>$email,
-             "password"=>$password,
+             "password"=>password_hash($password,PASSWORD_DEFAULT),
              "tlf_num"=>$tlf_num,
              "password_token"=>null,
               "email_verified"=>0,
