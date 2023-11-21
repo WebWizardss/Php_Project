@@ -1,18 +1,19 @@
 <?php
 require "../DbConnect/index.php";
 $errors = [];
-$email = "";
+$Email = "";
 
 
 
-if (isset($_POST["submit"])) {
-
-    $email = $_POST["email"];
-    if (empty($email)) {
-        $errors["email"] = "required email";
+if (isset($_POST["suivant"])) {
+    $Email = $_POST["Email"];
+    if (empty($Email)) {
+        $errors["Email"] = "required email";
+        
     } else {
-        $template = "modifier";
-        include "../layout.phtml";
+
+        // $template = "modifier";
+        // include "../layout.phtml";
 
 
     }
