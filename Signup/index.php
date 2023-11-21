@@ -15,6 +15,12 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $tlf_num=$_POST['tlf_num'];
 
+    // var_dump($_FILES['photo']);
+    $NameFile=$_FILES['photo']['name'];//afficher valeur key name //
+    $type_extention=pathinfo($NameFile,PATHINFO_EXTENSION);//par example png :type//
+    $name_file=md5(rand()).".".$type_extention; //changer nom image//
+    
+
     if(empty($nom)){
         $errors['nom']="name Required";
    }else if(empty($prenom)){
@@ -25,7 +31,12 @@ if(isset($_POST['submit'])){
         $errors['password']="password Required";
     }else if(empty($tlf_num)){
         $errors['tlf_num']="phone number Required";
-   }else if(empty($errors)){
+    }
+    else if(!move_uploaded_file($_FILES['photo']['tmp_name'],'../user_photo/'.$name_file)){
+        $errors['file']="upload failed";
+    }
+   else if(empty($errors)){
+        $photo='../user_photo/'.$name_file;
         $res=$db->prepare("INSERT INTO users (`nom`, `prenom`,`email`, `password`, `num_tlf`, `password_token`, `email_verified`, `photo`, `IsAdmin`) VALUES (:nom,:prenom,:email,:password,:tlf_num, :password_token, :email_verified, :photo, :IsAdmin);");
         $res->execute([
              "nom"=>$nom,
@@ -35,13 +46,14 @@ if(isset($_POST['submit'])){
              "tlf_num"=>$tlf_num,
              "password_token"=>null,
               "email_verified"=>0,
-               "photo"=>"image", 
+               "photo"=>$photo, 
                "IsAdmin"=>0
         ]);
         header("location:../login?message= sign up successfully &type=success");
     }
 
 }
+
 
 
 $page_titel = "page d'inscri";
