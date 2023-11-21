@@ -24,7 +24,7 @@
                       <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-5">Welcome !</h1>
                       </div>
-                    <form action="index.php" method="POST">
+                    <form action="index.php" method="POST" enctype="multipart/form-data">
 
                       <?php if(array_key_exists("message",$_GET)): ?>
                         <div class="alert alert-<?=$_GET['type']?>">
@@ -34,12 +34,15 @@
                        
                      <div class="mb-4">
                           <input  type="text" placeholder="Name..." name="nom" class="form-control rounded-pill p-4 <?= array_key_exists('nom',$errors) ? 'is-invalid' :''?>"  value="<?= $nom ?>" id="exampleInputNom ">
+                          <small class="text-danger"><?php echo array_key_exists("nom",$errors) ?   $errors['nom'] : '' ?></small>
                       </div>
                       <div class="mb-4">
                           <input  type="text" placeholder="LastName..." name="prenom" class="form-control rounded-pill p-4 <?= array_key_exists('prenom',$errors) ? 'is-invalid' :''?>"  value="<?= $prenom ?>" id="exampleInputPrenom">
+                          <small class="text-danger"><?php echo array_key_exists("prenom",$errors) ?   $errors['prenom'] : '' ?></small>
                       </div>
                       <div class="mb-4">
                           <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4 <?= array_key_exists('email',$errors) ? 'is-invalid' :''?>"  value="<?= $email ?>" id="exampleInputEmail1">
+                          <small class="text-danger"><?php echo array_key_exists("Email",$errors) ?   $errors['Email'] : '' ?></small>
                       </div>
                       <div class="mb-4">
                          <input type="password" placeholder="Password" name="password" class="form-control rounded-pill p-4 <?= array_key_exists('password',$errors) ? 'is-invalid' :''?>"  value="<?= $password ?>" id="exampleInputPassword1">
@@ -47,7 +50,11 @@
                       <div class="mb-5">
                           <input  type="text" placeholder="Entrer Number Phone..." name="tlf_num" class="form-control rounded-pill p-4 <?= array_key_exists('tlf_num',$errors) ? 'is-invalid' :''?>"  value="<?= $tlf_num ?>" id="exampleInputEmail1">
                       </div>
+                      <div>
+                        <input type="file" name="photo" >
+                      </div>
                           <button style="font-size:19px" type="submit" name="submit" class="btn btn-primary btn-block w-100 rounded-pill">Sign up</button>
+
                       </form>
                       <hr>
                        <div class="fin text-center">
