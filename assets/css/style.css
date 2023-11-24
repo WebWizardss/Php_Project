@@ -1,4 +1,3 @@
-
 /*========== navbar ==========*/
 .nav {
 
@@ -76,7 +75,7 @@ nav a:hover::before {
 
 
 
-.max-width {
+.home .max-width {
     max-width: 1300px;
     padding: 0% 10%;
     margin: auto;
@@ -248,7 +247,7 @@ nav a:hover::before {
 
 /* CSS for Food Menu */
 .food-menu {
-
+    margin-left: 8%;
     margin-top: -120px;
     background-color: #ececec;
     padding: 4% 0;
@@ -282,4 +281,161 @@ nav a:hover::before {
 .food-detail {
     font-size: 1rem;
     color: #747d8c;
+}
+
+/* add product */
+
+.formu {
+    margin: 50px;
+
+}
+
+/* footer section styling */
+footer {
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a {
+    color: rgb(29, 226, 193);
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+/* End of footer */
+
+/* contact section styling */
+
+.p_140 {
+    padding: 5%;
+    margin: 80px;
+    padding-top: 20px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.p_140 .p_141 {
+    height: 100%;
+    background-color: beige;
+    box-shadow: 16px 10px 20px 0px rgba(0, 0, 0, 0.27);
+    padding: 20px;
+    margin: 8%;
+    text-align: center;
+
+}
+
+.contact__img {
+    row-gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+/*Section 6 Styles*/
+
+.section6 {
+
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    background-image: url("../photo/subscribe.jpg");
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    font-size: 20px;
+    padding: 80px;
+}
+
+.form-group {
+    width: 50%;
+    margin: auto;
+}
+
+.section6 p {
+    font-size: 30px;
+}
+
+input[type=email] {
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+}
+
+input[type=button] {
+    background-color: #f15a29;
+    color: white;
+    font-size: 16px;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 2px;
+}
+
+.form-control::-moz-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: white;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: white;
+}
+
+#output {
+    font-size: 20px;
+}
+
+.footer .fa {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/*Section 7 Styles: Footer*/
+
+.section7 {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #f15a29;
+   
+}
+
+.footer {
+    width: 30%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer>img {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+}
+
+.footer p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 40px;
+}
+
+#copyright {
+    font-size: 14px;
 }

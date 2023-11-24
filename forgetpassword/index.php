@@ -1,14 +1,15 @@
 <?php
 require "../DbConnect/index.php";
+
 $errors = [];
-$Email = "";
+$Email ='';
 
 
 
-if (isset($_POST["suivant"])) {
+if(isset($_POST['submit'])){
     $Email = $_POST["Email"];
     if (empty($Email)) {
-        $errors["Email"] = "required email";
+        $errors['Email'] = "required email";
         
     } else {
 
@@ -22,7 +23,7 @@ if (isset($_POST["suivant"])) {
 }
 
 
-$page_titel = "page forget password";
+$page_titel = "page des menu";
 $template = "forget";
 include "../layout.phtml";
 ?>
