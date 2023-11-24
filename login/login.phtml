@@ -36,6 +36,7 @@
 
                       <div class="mb-4">
                           <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4  <?= array_key_exists('Email',$errors) ? 'is-invalid' :''?> "  value="<?= $Email ?>" id="exampleInputEmail1">
+                        
                           <small class="text-danger"><?php echo array_key_exists("Email",$errors) ?   $errors['Email'] : '' ?></small>
                       </div>
                       <div class="mb-5">
