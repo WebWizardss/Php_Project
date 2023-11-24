@@ -1,6 +1,4 @@
-
 <?php 
-
 require_once "../Dbconnect/index.php";
  
     $errors=[];
