@@ -1,15 +1,15 @@
 <?php 
-require "../DbConnect/index.php";
-$res = $db->prepare("DELETE from  where id=:id");
+require_once "../DbConnect/index.php";
+var_dump("done");
+
+$res = $db->prepare("DELETE from users where id=:id");
 $res->execute([
     'id'=>$_GET["id"]
-    
-]);
-header("location:admin.php?message=todo deleted&type=success");
-exit;
 
+]);
+header("location:index.php?message= successfully deleted &type=success");
 
 $page_titel = "interface admin";
-$template = "admin";
+$template = "listusers";
 include "../layout.phtml";
 ?>
