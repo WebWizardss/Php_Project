@@ -144,7 +144,7 @@
             <a href="../signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
         </nav>
     <?php endif; ?>
-    <?php include $template=="" ? "index" : $template .".phtml"; ?><!--Dynamique-->
+    <?php include ($template=="" ? "index" : $template) .".phtml"; ?><!--Dynamique-->
 
     <?php endif;?>
 </body>
