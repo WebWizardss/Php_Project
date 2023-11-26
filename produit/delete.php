@@ -1,5 +1,4 @@
 <?php
-
 require_once "../Dbconnect/index.php";
 var_dump("done");
 
