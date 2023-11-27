@@ -27,15 +27,13 @@
                <input  type="text" placeholder="LastName..." name="prenom" class="form-control rounded-pill p-4 <?= array_key_exists('prenom',$errors) ? 'is-invalid' :''?>"  value="<?= $prenom ?>" >
                 <small class="text-danger"><?php echo array_key_exists("prenom",$errors) ?   $errors['prenom'] : '' ?></small>
                 <br>
-                <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4 <?= array_key_exists('Email',$errors) ? 'is-invalid' :''?>"  value="<?= $Email ?>" >
+                <input  type="text" placeholder="Entrer Email Address..." name="Email" class="form-control rounded-pill p-4 <?= array_key_exists('Email',$errors) ? 'is-invalid' :''?>"  value="<?= $Email ?>" >
                 <small class="text-danger"><?php echo array_key_exists("Email",$errors) ?   $errors['Email'] : '' ?></small>
                 <br>
                 <input type="text" placeholder="ville" name="ville" class="form-control rounded-pill p-4 <?= array_key_exists('ville',$errors) ? 'is-invalid' :''?>"  value="<?= $ville ?>" >
                 <small class="text-danger"><?php echo array_key_exists("ville",$errors) ?   $errors['ville'] : '' ?></small>
                 <br>
-                <input type="text" placeholder="code postale" name="codepostale" class="form-control rounded-pill p-4 <?= array_key_exists('codepostale',$errors) ? 'is-invalid' :''?>"  value="<?= $codepostale ?>" >
-                <small class="text-danger"><?php echo array_key_exists("codepostale",$errors) ?   $errors['codepostale'] : '' ?></small>
-                <br>
+                
                 <input  type="text" placeholder="Entrer Number Phone..." name="tlf_num" class="form-control rounded-pill p-4 <?= array_key_exists('tlf_num',$errors) ? 'is-invalid' :''?>"  value="<?= $tlf_num ?>" >
                 <small class="text-danger"><?php echo array_key_exists("tlf_num",$errors) ?   $errors['tlf_num'] : '' ?></small>
                 <br>

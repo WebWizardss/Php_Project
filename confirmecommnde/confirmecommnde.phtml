@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    
 
 <div class="container">
         <div class="row mt-4">
@@ -21,36 +22,28 @@
                     <!-- <div class="food-menu-img">
                         <img src="" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                     </div> -->
-
+                    <form action="./index.php" method="POST">
                     <div class="food-menu-desc">
                         <h4>
-                            <?php echo $_POST['nom'] ?> <?php echo $_POST['prenom'] ?>
+                            <?php echo $_SESSION['nom'] ?> <?php echo $_SESSION['prenom'] ?>
+                        </h4>
+                        
+                        <h4>
+                            <?php echo $_SESSION['ville'] ?>
                         </h4>
                         <h4>
-                            <?php echo $_POST['codepostale'] ?>
-                        </h4>
-                        <h4>
-                            <?php echo $_POST['ville'] ?>
-                        </h4>
-                        <h4>
-                            <?php echo $_POST['tlf_num'] ?>
+                            <?php echo $_SESSION['tlf_num'] ?>
                         </h4>
                         
                       
                         <br>
-                        <form action="index.php" method="POST">
-                            <input type="hidden" value="<?= $_POST['nom']?>" name="nom">
-                            <input type="hidden" value="<?= $_POST['prenom']?>" name="prenom">
-                            <input type="hidden" value="<?= $_POST['adresse_email']?>" name="adresse_email">
-                            <input type="hidden" value="<?= $_POST['ville']?>" name="ville">
-                            <input type="hidden" value="<?= $_POST['codepostale']?>" name="codepostale">
-                            <input type="hidden" value="<?= $_POST['tlf_num']?>" name="tlf_num">
-                            
+                       
 
                        <button type="submit" name="confirmer" class="btn btn-primary" >confirmer</button> 
-                       <button><a href="delete.php?id=<?= $commandes['id']; ?>" class="btn btn-danger" onclick=" return confirm('do you want Annuler <?php echo $commandes['nom'] ?>');">annuler</a></button> 
-                       </form>
+                       <button><a class="btn btn-danger" onclick=" return confirm('do you want Annuler <?php echo $_SESSION['nom'] ?>');">annuler</a></button> 
+                       
                     </div>
+                    </form>
                 </div>
 
 
