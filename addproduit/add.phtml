@@ -49,6 +49,17 @@
                 <input type="file" name="photo">
             </div>
             <br>
+            <div>
+                <label for="form-label">product category</label>
+                <br>
+                <select name="category" id="">
+                    <?php foreach($categories as $category):?>
+                    <option value="<?= $category["id"]?>"><?= $category["nom"]?></option>
+                    <?php endforeach; ?>
+
+                </select>
+            </div>
+            <br>
 
 
 
