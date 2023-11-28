@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "../Dbconnect/index.php";
  
     $errors=[];
@@ -29,7 +30,20 @@ require_once "../Dbconnect/index.php";
                   header("location:index.php?message=password or email is incorrect&type=danger");
                 }
                 else{
-                    var_dump($user);
+                   
+                    $_SESSION['nom']=$user['nom'];
+                    $_SESSION['prenom']=$user['prenom'];
+                    $_SESSION['email']=$user['email'];
+                    $_SESSION['photo']=$user['photo'];
+                    $_SESSION['num_tlf']=$user['num_tlf'];
+                    $_SESSION['IsAdmin']=$user['IsAdmin'];
+                    if($user['IsAdmin']){
+                        $_SESSION['idAdmin']=$user['id'];
+                        header("location:../listusers");
+                    }else{
+                        $_SESSION['idClient']=$user['id'];
+                        header("location:../index.php");
+                    }
                 }
                }
                else{

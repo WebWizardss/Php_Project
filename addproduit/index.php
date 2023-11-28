@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../DbConnect/index.php";
 $errors = [];
 $nom = "";

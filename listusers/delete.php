@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "../DbConnect/index.php";
 var_dump("done");
 
@@ -9,7 +10,4 @@ $res->execute([
 ]);
 header("location:index.php?message= successfully deleted &type=success");
 
-$page_titel = "interface admin";
-$template = "listusers";
-include "../layout.phtml";
 ?>
