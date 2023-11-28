@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../DbConnect/index.php";
 $res = $db->prepare("DELETE from categories where id=:id");
 $res->execute([

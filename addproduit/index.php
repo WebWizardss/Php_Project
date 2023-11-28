@@ -36,14 +36,13 @@ if (isset($_POST['submit'])) {
      else if (empty($errors)) {
 
         $photo = '../produit_photo/' . $name_file;
-        $res = $db->prepare("INSERT INTO produits (`nom`, `prix`, `description`, `PhotoProduct`,`idCategory`) VALUES (:nom,:prix,:description,:photo,:idc)");
+        $res = $db->prepare("INSERT INTO produits (`nom`, `prix`, `description`, `PhotoProduit`,`idCategory`) VALUES (:nom,:prix,:description,:photo,:idc)");
         $res->execute([
             "nom"=>$nom,
             "prix"=>$prix,
             "description"=>$description,
             "photo"=>$photo,
             "idc"=>$category
-
         ]);
         header("location:../produit/?message= sign up successfully &type=success");
     }
