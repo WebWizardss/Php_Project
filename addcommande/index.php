@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require "../DbConnect/index.php";
 $errors=[];
 $nom="";
@@ -7,14 +8,14 @@ $Email="";
 $ville="";
 $codepostale="";
 $tlf_num="";
+if(isset($_POST["submit"])){
 
-if(isset($_POST['submit'])){
+
     $nom=$_POST['nom'];
-    $prenom=$_POST['nom'];
-    $Email=$_POST['nom'];
-    $ville=$_POST['nom'];
-    $codepostale=$_POST['nom'];
-    $tlf_num=$_POST['nom'];
+    $prenom=$_POST['prenom'];
+    $Email=$_POST['Email'];
+    $ville=$_POST['ville'];
+    $tlf_num=$_POST['tlf_num'];
 
     // var_dump($_FILES['photo']);
     // $NameFile=$_FILES['photo']['name'];//afficher valeur key name //
@@ -30,27 +31,32 @@ if(isset($_POST['submit'])){
          $errors['Email']="email Required";
    }else if(empty($ville)){
         $errors['ville']="ville Required";
-   }else if(empty($codepostale)){
-    $errors['codepostale']="code postale Required";
-    }else if(empty($tlf_num)){
+   
+   }else if(empty($tlf_num)){
        $errors['tlf_num']="phone number Required";
     }
    else if(empty($errors)){
+    $_SESSION['nom']=$nom;
+    $_SESSION['prenom']=$prenom;
+    $_SESSION['Email']=$Email;
+    $_SESSION['ville']=$ville;
+    $_SESSION['tlf_num']=$tlf_num;
         
-        $res=$db->prepare("INSERT INTO commandes (`nom`, `prenom`,'adresse_email','ville','codepostale','tlf_num') VALUES (:nom, :prenom , :Email , :ville , :codepostale , :tlf_num);");
-        $res->execute([
-             "nom"=>$nom,
-             "prenom"=>$prenom,
-             "Email"=>$Email,
-             "ville"=>$ville,
-             "codepostale"=>$codepostale,
-             "tlf_num"=>$tlf_num,
-             "status"=>0, 
-        ]);
-        header("location:../confiremcomande?message= commande successfully &type=success");
+     //    $res=$db->prepare("INSERT INTO commandes (`nom`, `prenom`,'adresse_email','ville','codepostale','tlf_num') VALUES (:nom, :prenom , :Email , :ville , :codepostale , :tlf_num);");
+     //    $res->execute([
+     //         "nom"=>$nom,
+     //         "prenom"=>$prenom,
+     //         "Email"=>$Email,
+     //         "ville"=>$ville,
+     //         "codepostale"=>$codepostale,
+     //         "tlf_num"=>$tlf_num,
+     //         "status"=>0, 
+     //    ]);
+        header("location:../confirmecommnde/index.php?message= commande successfully &type=success");
     }
-
 }
+
+
 
 
 
