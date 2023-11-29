@@ -234,12 +234,17 @@
 
     <?php if ($template == ""): ?>
         <nav class=" d-inline-block text-center shadow-lg mb-5 nav sticky-top">
+<<<<<<< HEAD
             <a href="#acceuil" class="text-decoration-none  btn-light col">home</a>
+=======
+            <a href="#acceuil" class="text-decoration-none  btn-light col"><?=$lang['home']?></a>
+>>>>>>> 67fa1f38334365b70a2ade5702be3297fd435a84
             <a href="#no_menu" class="text-decoration-none  btn-light col">menu</a>
             <a href="#obout_us" class="text-decoration-none  btn-light col">about us</a>
             <a href="./produit" class="text-decoration-none  btn-light col">contact</a>
             <a  <?=  (!isset($_SESSION['idClient']))  ? '' : 'style="display:none"';?> href="./signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
             <a  <?=  (!isset($_SESSION['idClient']))  ? '' : 'style="display:none"';?>  href="./login/index.php" class="sign_up text-decoration-none  btn-light col">sign in</a>
+<<<<<<< HEAD
             <a  data-bs-toggle="modal" data-bs-target="#exampleModal" <?=  isset($_SESSION['idClient']) ? '' : 'style="display:none"';?> type="button" class="position-relative">
               Panier
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -247,12 +252,22 @@
               </span>
                </a>
                  <a>
+=======
+            <a  <?=  isset($_SESSION['idClient']) ? '' : 'style="display:none"';?>>
+               Panier
+             </a>
+             <a>
+>>>>>>> 67fa1f38334365b70a2ade5702be3297fd435a84
                             <select  name="choice_langue" id="" onchange="location=this.value;">
                             <option value="./ChangerLanguage.php?lang=en">anglais</option>
                                 <option value="./ChangerLanguage.php?lang=fr">francais</option>
                                 <option value="./ChangerLanguage.php?lang=ar">arabic</option>
                             </select>
+<<<<<<< HEAD
                  </a>
+=======
+    </a>
+>>>>>>> 67fa1f38334365b70a2ade5702be3297fd435a84
              <?php if(isset($_SESSION['idClient'])): ?>
               <div class="float-end dropdown">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -269,25 +284,33 @@
           </nav>
     <?php else :?>
         <nav class=" d-inline-block text-center shadow-lg mb-5 nav sticky-top">
+<<<<<<< HEAD
             <a href="../index.php" class="text-decoration-none  btn-light col">home</a>
+=======
+            <a href="../index.php" class="text-decoration-none  btn-light col"><?=$lang['home']?></a>
+>>>>>>> 67fa1f38334365b70a2ade5702be3297fd435a84
             <a href="../index.php" class="text-decoration-none  btn-light col">menu</a>
             <a href="../index.php" class="text-decoration-none  btn-light col">about us</a>
             <a href="../produit" class="text-decoration-none  btn-light col">contact</a>
             <a <?=   (!isset($_SESSION['idClient'])) ? '' : 'style="display:none"';?> href="../signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
             <a <?=  (!isset($_SESSION['idClient'])) ? '' : 'style="display:none"';?> href="../login/index.php" class="sign_up text-decoration-none  btn-light col">sign In</a>
+
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal" <?=  isset($_SESSION['idClient']) ? '' : 'style="display:none"';?> type="button" class="position-relative">
                   Panier
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               <?=isset($_SESSION['carte']) ? count($_SESSION['carte']) : 0;?>
             </span>
-             </a>
+
              <a>
                  <select  name="choice_langue" id="" onchange="location=this.value;">
                                 <option value="./ChangerLanguage.php?lang=en">anglais</option>
                                 <option value="./ChangerLanguage.php?lang=fr">francais</option>
                                 <option value="./ChangerLanguage.php?lang=ar">arabic</option>
                  </select>
+
                </a>
+
+
              <?php if(isset($_SESSION['idClient'])): ?>
               <div class="float-end dropdown">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
