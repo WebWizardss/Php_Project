@@ -2,6 +2,13 @@
 session_start();
 require_once "../Dbconnect/index.php";
  
+
+if(!isset($_SESSION['carte'])){
+    $_SESSION['carte']=array();
+}else{
+    $_SESSION['carte']=$_SESSION['carte'];
+}
+
     $errors=[];
      $Email="";
      $Password="";

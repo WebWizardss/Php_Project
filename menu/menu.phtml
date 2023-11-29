@@ -1,0 +1,40 @@
+
+
+<body style="background-color: #ececec ;">
+<h2 class="text-center"><?= $category['nom'] ?> Menu</h2>
+    <section class="food-menu">
+        <div class="container">
+            <?php if(count($produits)==0): ?>
+                <div class="alert alert-danger">
+                    <h2 class="text-center">Aucun produit dans cette categorie</h2>
+                </div>
+            <?php  else :?>
+            <form action="./index.php" method="GET">
+                <fieldset class="form-group">
+                    <input type="hidden" name="idcategorie" value="<?=$idCategorie?>">
+                    <input type="text" name="search" class="form-control form-control-lg" placeholder="Search for food">
+                    <button class="btn btn-primary btn-lg text-center" name="btnsearch" type="submit">Search</button>
+                </fieldset>
+            </form>
+            <?php foreach($produits as $val): ?>
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="<?=$val['PhotoProduit']?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+                <div class="food-menu-desc">
+                    <h4><?=$val['nom'];?></h4>
+                    <p class="food-price">
+                        <?=$val['prix'];?>
+                    </p>
+                    <p class="food-detail">
+                        <?=$val['description'];?>
+                    </p>
+                    <br>
+                    <a <?= isset($_SESSION['idClient']) ? '' : "style='cursor: not-allowed;'" ?> href='<?= !isset($_SESSION['idClient']) ? "" : "../order_now.php".'?id='.$val['id']?>' class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+            <div class="clearfix"></div>
+        </div>
+    </section>

@@ -10,62 +10,14 @@
     <h1>NOTRE MENU</h1>
 </section>
 <section class="p_120" id="service">
-    <article>
+        <?php foreach($categories as $categorie): ?>
         <div class="separation">
-            <h4 class="service_item shadow-lg ">pizza menu</h4>
-            <a href="./menu/pizzamenu.php">
-                <img src="assets/photo/pizza.jpg" alt="" class="photo_menu1">
+            <h4 class="service_item shadow-lg "><?= $categorie['nom'] ;?> menu</h4>
+            <a href="./menu/index.php?idcategorie=<?=$categorie['id']?>">
+                <img  src="./categorie_photo/<?= explode("/",$categorie['photo'])[2] ?>" alt="" class="photo_menu1">
             </a>
         </div>
-
-        </div>
-        <div class="separation">
-            <h4 class="service_item shadow-lg ">drink menu</h4>
-            <a href="">
-                <img src="assets/photo/drink.jpg" alt="" class="photo_menu1">
-            </a>
-        </div>
-        </div>
-
-
-    </article>
-    <article>
-        <div class="separation">
-            <h4 class="service_item shadow-lg ">sweet menu</h4>
-            <a href="">
-                <img src="assets/photo/sweet.jpg" alt="" class="photo_menu1">
-            </a>
-        </div>
-
-        </div>
-        <div class="separation">
-            <h4 class="service_item shadow-lg ">breakfast menu</h4>
-            <a href="">
-                <img src="assets/photo/breakfast.jpg
-                    " alt="" class="photo_menu1">
-            </a>
-        </div>
-
-        </div>
-    </article>
-    <article>
-        <div class="separation">
-            <h4 class="service_item shadow-lg ">menu of dishes</h4>
-            <a href="">
-                <img src="assets/photo/menu1.jpg" alt="" class="photo_menu1">
-            </a>
-        </div>
-
-        </div>
-        <div class="separation">
-            <h4 class="service_item shadow-lg ">burger menu</h4>
-            <a href="">
-                <img src="assets/photo/burger2.jpg" alt="" class="photo_menu1">
-            </a>
-        </div>
-
-        </div>
-    </article>
+        <?php endforeach; ?>
 </section>
 
 <!--========== about us ==========-->
