@@ -1,0 +1,69 @@
+<div class="container mt-5 py-5">
+    <h2 class="mb-5">ListOrders</h2>
+    <table class="table ">
+        <thead>
+            <td>#</td>
+            <td>nom</td>
+            <td>prenom</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>ville</td>
+            <td>prixtotale</td>
+        </thead>
+      <?php if(count($commandes)==0): ?>
+         <tbody>
+      <tr>
+         <td colspan="6" class="text-center">No OrderFound</td>
+      </tr>
+        </tbody> 
+        <?php else:?>
+        <tbody>
+
+            <?php foreach($commandes as $commande): ?>
+            <tr>
+                <td><?= $commande['id']; ?></td>
+                <td><?= $commande['nom']; ?></td>
+                <td><?= $commande['prenom']; ?></td>
+                <td><?= $commande['adresse_email']; ?></td>
+                <td><?= $commande['tlf_num'];?></td>
+                <td><?= $commande['ville'];?></td>
+                <td><?= $commande['prix_total'];?></td>
+                <td>
+                    <a href="./index.php?idAaccepte=<?=$commande['id']?>">
+                        <button class="btn btn-success" >
+                            <i class="bi bi-check-circle"></i>                        
+                         </button>
+                    </a>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$commande['id']?>">
+                            <i class="bi bi-trash"></i>
+                        </button>
+
+
+<div class="modal fade" id="exampleModal<?=$commande['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Deleted</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do You Want to reject <?=$commande['nom']?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="./index.php?idRefuse=<?=$commande['id'];?>">
+        <button type="button" class="btn btn-danger">
+             Delete
+        </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+        <?php  endif;?>
+    </table>
+</div>

@@ -9,8 +9,8 @@ if(isset($_POST['confirmer'])){
     // $type_extention=pathinfo($NameFile,PATHINFO_EXTENSION);//par example png :type//
     // $name_file=md5(rand()).".".$type_extention; //changer nom image//
         
-        $res=$db->prepare("INSERT INTO commandes (`nom`, `prenom`,`tlf_num` , `adresse_email`, `ville`, `prix_total`, `status`, `code_commande`) VALUES
-                                                 (:nom, :prenom ,:tlf_num , :Email , :ville  ,:prix_totale , :status ,:code_commande );");
+        $res=$db->prepare("INSERT INTO commandes (`nom`, `prenom`,`tlf_num` , `adresse_email`, `ville`, `prix_total`, `status`, `code_commande`,`user_id`) VALUES
+                                                 (:nom, :prenom ,:tlf_num , :Email , :ville  ,:prix_totale , :status ,:code_commande,:user_id );");
         $res->execute([
              "nom"=>$_SESSION['nom'],
              "prenom"=>$_SESSION['prenom'],
@@ -19,7 +19,8 @@ if(isset($_POST['confirmer'])){
              "tlf_num"=>$_SESSION['tlf_num'],
              "status"=>0,
              "prix_totale"=>0, 
-             "code_commande"=>mt_rand(10,9999)
+             "code_commande"=>mt_rand(10,9999),
+             "user_id"=> $_SESSION['idClient']
         ]);
         
         $id_commande = $db->lastInsertId(); 
