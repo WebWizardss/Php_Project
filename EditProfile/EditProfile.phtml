@@ -1,0 +1,44 @@
+<div class="d-flex p-3 m-4 justify-content-center">   
+    <div class="col-xl-10 col-md-12 col-lg-12">
+          <div class="row shadow-lg rounded">
+                <div class=" col-lg-12 py-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-5">Update Profile</h1>
+                      </div>
+                      
+                    <form action="index.php" method="POST" enctype="multipart/form-data">
+
+                      <?php if(array_key_exists("message",$_GET)): ?>
+                        <div class="alert alert-<?=$_GET['type']?>">
+                           <?php echo $_GET['message'] ?>
+                        </div>
+                      <?php endif; ?>
+                       
+                     <div class="mb-4">
+                          <input  type="text" placeholder="Name..." name="nom" class="form-control rounded-pill p-4 <?= array_key_exists('nom',$errors) ? 'is-invalid' :''?>"  value="<?= $_SESSION['nom'] ?>" id="exampleInputNom ">
+                      </div>
+                      <div class="mb-4">
+                          <input  type="text" placeholder="LastName..." name="prenom" class="form-control rounded-pill p-4 <?= array_key_exists('prenom',$errors) ? 'is-invalid' :''?>"  value="<?= $_SESSION['prenom'] ?>" id="exampleInputPrenom">
+                      </div>
+                      <div class="mb-4">
+                          <input  type="text" placeholder="Entrer Email Address..." name="email" class="form-control rounded-pill p-4 <?= array_key_exists('email',$errors) ? 'is-invalid' :''?>"  value="<?= $_SESSION['email'] ?>" id="exampleInputEmail1">
+                      </div>
+                      <div class="mb-5">
+                          <input  type="text" placeholder="Entrer Number Phone..." name="tlf_num" class="form-control rounded-pill p-4 <?= array_key_exists('tlf_num',$errors) ? 'is-invalid' :''?>"  value="<?= $_SESSION['num_tlf'] ?>" id="exampleInputEmail1">
+                      </div>
+                      <div>
+                        <img style="width:120px;height:150px;" src="../user_photo/<?= explode("/",$_SESSION['photo'])[2];?>" alt="mdo"  class="rounded-circle"/>
+                      </div>
+                      <div>
+                        <input type="file" name="photo" >
+                      </div>
+                          <button style="font-size:19px" type="submit" name="submit" class="btn btn-warning btn-block w-100 rounded-pill">Update</button>
+                      </form>
+                </div>
+          </div>
+    </div>
+</div>
+
+
+
+

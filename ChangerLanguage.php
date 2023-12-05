@@ -1,5 +1,8 @@
 <?php 
+
 require "./DbConnect/index.php";
+
+
     session_start();
     if(!isset($_SESSION['lang'])){
         $_SESSION['lang']='en';
@@ -12,9 +15,13 @@ require "./DbConnect/index.php";
             $_SESSION['lang']='ar';
         }
     }
+
+
     $res = $db->prepare("select * from categories");
     $res->execute();
     $categories = $res->fetchAll();
+
+
     require_once "./languages/".$_SESSION['lang'].".php";
     $page_titel="Home";
     $template='';

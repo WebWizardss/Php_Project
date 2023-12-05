@@ -108,7 +108,11 @@
       </li>
 
       <li class="mb-3">
+
         <a class="btn btn-toggle align-items-center rounded ">
+
+        <a class="btn btn-toggle align-items-center rounded" href="../ListeOrders">
+
         <i class="fa-solid fa-truck-fast"></i>
           Orders
     </a>
@@ -260,7 +264,11 @@
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
             <li><a class="dropdown-item" href="#"><?= $_SESSION['nom'] ?></a></li>
+<<<<<<< HEAD
             <li><a class="dropdown-item" href="#">Settings  </a></li>
+=======
+            <li><a class="dropdown-item" href="./EditProfile">Settings  </a></li>
+>>>>>>> 00a4cb3bf20cfb6a9232f90be1e8ae2b27a53017
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./logout.php">Sign out</a></li>
           </ul>
@@ -275,19 +283,34 @@
             <a href="../produit" class="text-decoration-none  btn-light col">contact</a>
             <a <?=   (!isset($_SESSION['idClient'])) ? '' : 'style="display:none"';?> href="../signUp/index.php" class="sign_up text-decoration-none  btn-light col">sign up</a>
             <a <?=  (!isset($_SESSION['idClient'])) ? '' : 'style="display:none"';?> href="../login/index.php" class="sign_up text-decoration-none  btn-light col">sign In</a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00a4cb3bf20cfb6a9232f90be1e8ae2b27a53017
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal" <?=  isset($_SESSION['idClient']) ? '' : 'style="display:none"';?> type="button" class="position-relative">
                   Panier
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               <?=isset($_SESSION['carte']) ? count($_SESSION['carte']) : 0;?>
             </span>
+<<<<<<< HEAD
              </a>
+=======
+
+>>>>>>> 00a4cb3bf20cfb6a9232f90be1e8ae2b27a53017
              <a>
                  <select  name="choice_langue" id="" onchange="location=this.value;">
                                 <option value="./ChangerLanguage.php?lang=en">anglais</option>
                                 <option value="./ChangerLanguage.php?lang=fr">francais</option>
                                 <option value="./ChangerLanguage.php?lang=ar">arabic</option>
                  </select>
+<<<<<<< HEAD
                </a>
+=======
+
+               </a>
+
+
+>>>>>>> 00a4cb3bf20cfb6a9232f90be1e8ae2b27a53017
              <?php if(isset($_SESSION['idClient'])): ?>
               <div class="float-end dropdown">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -295,7 +318,11 @@
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
             <li><a class="dropdown-item" href="#"><?= $_SESSION['nom'] ?></a></li>
+<<<<<<< HEAD
             <li><a class="dropdown-item" href="#">Settings   </a></li>
+=======
+            <li><a class="dropdown-item" href="./EditProfile">Settings   </a></li>
+>>>>>>> 00a4cb3bf20cfb6a9232f90be1e8ae2b27a53017
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./logout.php">Sign out</a></li>
           </ul>
