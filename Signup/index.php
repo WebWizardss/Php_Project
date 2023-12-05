@@ -8,6 +8,13 @@ $password = "";
 $tlf_num = "";
 $photo = "";
 
+if(!isset($_SESSION['carte'])){
+    $_SESSION['carte']=array();
+}else{
+    $_SESSION['carte']=$_SESSION['carte'];
+}
+
+
 if (isset($_POST['submit'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
