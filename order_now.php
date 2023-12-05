@@ -7,6 +7,7 @@ $page_titel = "page d'acceill";
 if(!isset($_SESSION['carte'])){
     $_SESSION['carte']=array();
 }else{
+    
     $_SESSION['carte']=$_SESSION['carte'];
 }
 
